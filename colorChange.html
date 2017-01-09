@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>functional exp example</title>
+		
+	</head>
+	<body id="body">
+		<script>
+			// var arr = new Array ("black","green","blue","red","gray");
+			// var colourType=new Array(0,1,2,3,4,5,6,7,8,9,"a","b","c","d","e","f");
+			var colourType=[0,1,2,3,4,5,6,7,8,9,"a","b","c","d","e","f"];
+			var counter=0;
+			var colour=function(){
+				if(counter<=1000){
+				var cType1=colourType[Math.floor(Math.random() * colourType.length)];
+				var cType2=colourType[Math.floor(Math.random() * colourType.length)];
+				var cType3=colourType[Math.floor(Math.random() * colourType.length)];
+				document.getElementById('body').style.backgroundColor="#"+cType1+""+cType2+""+cType3;
+				counter+=1;
+				}
+				
+			}
+			var x=setInterval(colour,1000);
+		</script>
+	</body>
+</html>
